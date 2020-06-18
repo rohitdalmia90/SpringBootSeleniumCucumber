@@ -32,6 +32,7 @@ public class googleTest2 extends SpringBaseTestNGTest {
         this.googlePage.getSearchComponent().search("Spring Boot ");
         Assert.assertTrue(this.googlePage.getSearchResult().getCount() > 2);
         this.screenShotUtil.takeScreenShot();
+        this.googlePage.close();
 
     }
 

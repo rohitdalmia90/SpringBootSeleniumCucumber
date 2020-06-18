@@ -33,6 +33,7 @@ public class googleTest extends SpringBaseTestNGTest {
         this.googlePage.getSearchComponent().search("environment ");
         Assert.assertTrue(this.googlePage.getSearchResult().getCount() > 2);
         this.screenShotUtil.takeScreenShot();
+        this.googlePage.close();
 
     }
 

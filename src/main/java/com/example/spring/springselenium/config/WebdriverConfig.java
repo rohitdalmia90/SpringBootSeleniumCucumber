@@ -21,14 +21,14 @@ public class WebdriverConfig {
     @Scope("browserscope")
     @ConditionalOnMissingBean
     public WebDriver chromeDriver() {
-       WebDriverManager.chromedriver().version("71.0.3578.80").setup();
-        //WebDriverManager.chromedriver().version("83.0.4103.61").setup();
+     //  WebDriverManager.chromedriver().version("71.0.3578.80").setup();
+        WebDriverManager.chromedriver().version("83.0.4103.61").setup();
         return new ChromeDriver();
     }
 
     @Bean
     /*  @Primary*/
-    @ConditionalOnProperty(name = "browser", havingValue = "firefox")
+       @ConditionalOnProperty(name = "browser", havingValue = "firefox")
     public WebDriver firefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
