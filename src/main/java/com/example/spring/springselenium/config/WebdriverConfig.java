@@ -28,7 +28,7 @@ public class WebdriverConfig {
 
     @Bean
     /*  @Primary*/
-    @ConditionalOnProperty(name = "browser", havingValue = "firefox")
+//    @ConditionalOnProperty(name = "browser", havingValue = "firefox")
     public WebDriver firefoxDriver() {
         WebDriverManager.firefoxdriver().setup();
         return new FirefoxDriver();
